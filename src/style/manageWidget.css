@@ -1,76 +1,147 @@
-/* Backdrop */
+/* Modal layout */
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  max-width: 90%;
+  background: white;
+  border-radius: 8px;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  z-index: 1000;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  margin-top: 6px;
+}
+
+/* Modal backdrop */
 .modal-backdrop {
-                                                  position: fixed;
-                                                  top: 0;
-                                                  left: 0;
-                                                  height: 100vh;
-                                                  width: 100vw;
-                                                  background: rgba(0, 0, 0, 0.3);
-                                                  z-index: 1000;
-                                                }
-                                                
-                                                /* Right side panel */
-                                                .modal {
-                                                  position: fixed;
-                                                  top: 0;
-                                                  right: 0;
-                                                  height: 100vh;
-                                                  width: 500px;
-                                                  max-width: 90%;
-                                                  background-color: #fff;
-                                                  box-shadow: -4px 0 10px rgba(0, 0, 0, 0.2);
-                                                  z-index: 1001;
-                                                  padding: 2rem;
-                                                  overflow-y: auto;
-                                                  animation: slideIn 0.3s ease-out;
-                                                  display: flex;
-                                                  flex-direction: column;
-                                                }
-                                                
-                                                /* Slide animation */
-                                                @keyframes slideIn {
-                                                  from {
-                                                    transform: translateX(100%);
-                                                  }
-                                                  to {
-                                                    transform: translateX(0%);
-                                                  }
-                                                }
-                                                
-                                                /* Headings */
-                                                .modal h3 {
-                                                  font-size: 1.25rem;
-                                                  font-weight: 600;
-                                                }
-                                                
-                                                /* Widget list */
-                                                .widget-block {
-                                                  margin-bottom: 1rem;
-                                                  padding-bottom: 1rem;
-                                                  border-bottom: 1px solid #eee;
-                                                }
-                                                
-                                                .widget-block strong {
-                                                  display: block;
-                                                  margin-bottom: 0.5rem;
-                                                }
-                                                
-                                                /* Checkbox layout */
-                                                .widget-block label {
-                                                  display: inline-flex;
-                                                  align-items: center;
-                                                  margin-right: 1rem;
-                                                }
-                                                
-                                                /* Button */
-                                                .modal button {
-                                                  padding: 0.5rem 1rem;
-                                                  font-size: 1rem;
-                                                  align-self: flex-start;
-                                                  margin-top: 1rem;
-                                                  border: none;
-                                                  background-color: #ccc;
-                                                  cursor: pointer;
-                                                  border-radius: 4px;
-                                                }
-                                                
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 999;
+}
+
+/* Modal header */
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  background: #2b064a;
+  padding: 1rem;
+  color: white;
+  border-radius: 6px 6px 3px 3px; /* Optional: smooth top corners */
+}
+
+.modal-header h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+/* Close button */
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: white;
+  padding: 0;
+  margin: auto;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.close-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 16px;
+}
+
+.tabs button {
+  background: none;
+  border: none;
+  padding: 10px 16px;
+  cursor: pointer;
+  font-weight: 400;
+  color: #333;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.tabs button.active {
+  border-bottom: 2px solid #0d2b6b;
+  
+  font-weight: bold;
+}
+
+/* Widget checkbox list */
+.widget-checkbox-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  padding: 10px 0;
+}
+
+.widget-checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: #333;
+}
+
+.widget-checkbox-item input[type="checkbox"] {
+  margin: 0;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.widget-checkbox-item label {
+  cursor: pointer;
+}
+
+/* Modal footer buttons */
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.cancel-btn,
+.confirm-btn {
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.cancel-btn {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.confirm-btn {
+  background-color: #0d2b6b;
+  color: white;
+}

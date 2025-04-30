@@ -18,48 +18,55 @@ const Dashboard = () => {
   };
 
   return (
-    <div className="dashboard-container">
-      <div className="dashboard-header">
-        <h1>Widget Dashboard</h1>
-        <div className="dashboard-controls">
-          <button onClick={() => setShowModal(true)}>+ Add Widget</button>
-          <button onClick={() => setShowAssignmentModal(true)}>
-            Manage Widget Assignments
-          </button>
-        </div>
+    <div className="body">
+      <div className="navbar">
+        <h2>Home</h2>
+        <SearchWidget className="search-widget" />
       </div>
 
-      <SearchWidget />
-
-      {categories.map((category) => (
-        <div className="category-container" key={category.id}>
-          <h2 className="category-title">{category.name}</h2>
-          <div className="widget-list">
-            {category.widgets
-              .filter((widget) =>
-                widget.name.toLowerCase().includes(searchQuery.toLowerCase())
-              )
-              .map((widget) => (
-                <Widget
-                  key={widget.id}
-                  widget={widget}
-                  categoryId={category.id}
-                />
-              ))}
+      <div className="dashboard-container">
+        <div className="dashboard-header">
+          <h1> Dashboard</h1>
+          <div className="dashboard-controls">
+            <button onClick={() => setShowModal(true)}>+ Add Widget</button>
+            <button onClick={() => setShowAssignmentModal(true)}>
+              All categories and widget
+            </button>
           </div>
         </div>
-      ))}
 
-      {showModal && (
-        <AddWidgetModal
-          categoryId={selectedCategory}
-          onClose={() => setShowModal(false)}
-        />
-      )}
+        {categories.map((category) => (
+          <div className="category-container" key={category.id}>
+            <h2 className="category-title">{category.name}</h2>
+            <div className="widget-list">
+              {category.widgets
+                .filter((widget) =>
+                  widget.name.toLowerCase().includes(searchQuery.toLowerCase())
+                )
+                .map((widget) => (
+                  <Widget
+                    key={widget.id}
+                    widget={widget}
+                    categoryId={category.id}
+                  />
+                ))}
+            </div>
+          </div>
+        ))}
 
-      {showAssignmentModal && (
-        <WidgetAssignmentModal onClose={() => setShowAssignmentModal(false)} />
-      )}
+        {showModal && (
+          <AddWidgetModal
+            categoryId={selectedCategory}
+            onClose={() => setShowModal(false)}
+          />
+        )}
+
+        {showAssignmentModal && (
+          <WidgetAssignmentModal
+            onClose={() => setShowAssignmentModal(false)}
+          />
+        )}
+      </div>
     </div>
   );
 };

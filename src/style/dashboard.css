@@ -3,6 +3,27 @@
                                                   font-family: Arial, sans-serif;
                                                   background-color: #f2f4f7;
                                                 }
+                                                .navbar {
+                                                  display: flex;
+                                                  align-items: center;
+                                                  padding: 1rem 1.5rem;
+                                                  background-color: #b8b5ba; /* Optional: background color */
+                                                  color: white;
+                                                  justify-content: space-between;
+                                                }
+                                                
+                                                /* Ensures the search widget moves to the far right */
+                                                .navbar > h2 {
+                                                  margin: 0;
+                                                  font-size: 1.5rem;
+                                                  font-weight: bold;
+                                                }
+                                                
+                                                /* You can target SearchWidget via a wrapper class or direct component style */
+                                                .navbar > .search-widget {
+                                                  margin-left: auto;
+                                                }
+                                                
                                                 
                                                 .dashboard-header {
                                                   display: flex;
@@ -15,7 +36,7 @@
                                                   font-size: 2rem;
                                                   margin: 0;
                                                 }
-                                                
+                                               
                                                 .dashboard-controls {
                                                   display: flex;
                                                   gap: 1rem;
@@ -25,7 +46,7 @@
                                                   padding: 0.5rem 1rem;
                                                   border: none;
                                                   border-radius: 6px;
-                                                  background-color: #007bff;
+                                                  background-color: #b8b5ba;
                                                   color: white;
                                                   cursor: pointer;
                                                   font-weight: 500;
