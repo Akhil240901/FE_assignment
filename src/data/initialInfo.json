@@ -1,0 +1,30 @@
+{
+                                                  "categories": [
+                                                    {
+                                                      "id": "cat-1",
+                                                      "name": "CSPM Executive Dashboard",
+                                                      "widgets": [
+                                                        { "id": "wid-1", "name": "Widget One", "text": "Random text one." },
+                                                        { "id": "wid-2", "name": "Widget Two", "text": "Random text two." }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "id": "cat-2",
+                                                      "name": "Network Monitoring",
+                                                      "widgets": [
+                                                        { "id": "wid-3", "name": "Traffic Overview", "text": "Live traffic metrics and analysis." },
+                                                        { "id": "wid-4", "name": "Firewall Health", "text": "Current status of firewall systems." }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "id": "cat-3",
+                                                      "name": "User Access Insights",
+                                                      "widgets": [
+                                                        { "id": "wid-5", "name": "Login Trends", "text": "Displays user login patterns over time." },
+                                                        { "id": "wid-6", "name": "Permission Audit", "text": "Overview of high-privilege accounts." }
+                                                      ]
+                                                    }
+                                                  ],
+                                                  "searchQuery": ""
+                                                }
+                                                

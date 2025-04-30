@@ -1,0 +1,76 @@
+/* Backdrop */
+.modal-backdrop {
+                                                  position: fixed;
+                                                  top: 0;
+                                                  left: 0;
+                                                  height: 100vh;
+                                                  width: 100vw;
+                                                  background: rgba(0, 0, 0, 0.3);
+                                                  z-index: 1000;
+                                                }
+                                                
+                                                /* Right side panel */
+                                                .modal {
+                                                  position: fixed;
+                                                  top: 0;
+                                                  right: 0;
+                                                  height: 100vh;
+                                                  width: 500px;
+                                                  max-width: 90%;
+                                                  background-color: #fff;
+                                                  box-shadow: -4px 0 10px rgba(0, 0, 0, 0.2);
+                                                  z-index: 1001;
+                                                  padding: 2rem;
+                                                  overflow-y: auto;
+                                                  animation: slideIn 0.3s ease-out;
+                                                  display: flex;
+                                                  flex-direction: column;
+                                                }
+                                                
+                                                /* Slide animation */
+                                                @keyframes slideIn {
+                                                  from {
+                                                    transform: translateX(100%);
+                                                  }
+                                                  to {
+                                                    transform: translateX(0%);
+                                                  }
+                                                }
+                                                
+                                                /* Headings */
+                                                .modal h3 {
+                                                  font-size: 1.25rem;
+                                                  font-weight: 600;
+                                                }
+                                                
+                                                /* Widget list */
+                                                .widget-block {
+                                                  margin-bottom: 1rem;
+                                                  padding-bottom: 1rem;
+                                                  border-bottom: 1px solid #eee;
+                                                }
+                                                
+                                                .widget-block strong {
+                                                  display: block;
+                                                  margin-bottom: 0.5rem;
+                                                }
+                                                
+                                                /* Checkbox layout */
+                                                .widget-block label {
+                                                  display: inline-flex;
+                                                  align-items: center;
+                                                  margin-right: 1rem;
+                                                }
+                                                
+                                                /* Button */
+                                                .modal button {
+                                                  padding: 0.5rem 1rem;
+                                                  font-size: 1rem;
+                                                  align-self: flex-start;
+                                                  margin-top: 1rem;
+                                                  border: none;
+                                                  background-color: #ccc;
+                                                  cursor: pointer;
+                                                  border-radius: 4px;
+                                                }
+                                                
