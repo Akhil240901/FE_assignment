@@ -2,7 +2,6 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { removeWidget } from "../features/dashboardSlice";
 import { PieChartR } from "../charts/PieChartR";
-import { BarChartR } from "../charts/BarChartR";
 
 const Widget = ({ widget, categoryId }) => {
   const dispatch = useDispatch();
@@ -12,8 +11,6 @@ const Widget = ({ widget, categoryId }) => {
     switch (widget.type) {
       case "pie":
         return <PieChartR data={widget.data} />;
-      case "bar":
-        return <BarChartR data={widget.data} />;
       default:
         return <p>{widget.text}</p>; // fallback to text if no chart type
     }

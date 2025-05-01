@@ -20,11 +20,6 @@ const Dashboard = () => {
 
   return (
     <div className="body">
-      <div className="navbar">
-        <h2>Home</h2>
-        <SearchWidget className="search-widget" />
-      </div>
-
       <div className="dashboard-container">
         <div className="dashboard-header">
           <h1> Dashboard</h1>
