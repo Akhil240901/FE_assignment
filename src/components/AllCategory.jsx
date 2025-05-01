@@ -7,7 +7,7 @@ import "../style/manageWidget.css";
 
 const AllCategory = ({ onClose }) => {
   const { categories } = useSelector((state) => state.dashboard);
-  const [activeTab, setActiveTab] = useState(categories?.name || "");
+  const [activeTab, setActiveTab] = useState(categories[0]?.name || "");
   const dispatch = useDispatch();
 
   const toggleAssignment = (widgetId, categoryId, checked) => {

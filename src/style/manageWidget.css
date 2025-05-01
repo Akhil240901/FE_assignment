@@ -103,10 +103,14 @@
 
 .widget-checkbox-item {
   display: flex;
-  align-items: center;
-  gap: 6px;
+  align-items: center;  
+  gap: 10px;  
   font-size: 14px;
   color: #333;
+  max-width: 100%;
+  white-space: nowrap;  
+  overflow: hidden;  
+  text-overflow: ellipsis;  
 }
 
 .widget-checkbox-item input[type="checkbox"] {
@@ -117,6 +121,7 @@
 
 .widget-checkbox-item label {
   cursor: pointer;
+  white-space: nowrap;  
 }
 
 /* Modal footer buttons */
