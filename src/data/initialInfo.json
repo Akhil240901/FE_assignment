@@ -1,11 +1,21 @@
 {
                                                   "categories": [
                                                     {
-                                                      "id": "cat-1",
-                                                      "name": "CSPM Executive Dashboard",
+                                                      "id": "cat-4",
+                                                      "name": "Cloud Risk Assessment",
                                                       "widgets": [
-                                                        { "id": "wid-1", "name": "Widget One", "text": "Random text one." },
-                                                        { "id": "wid-2", "name": "Widget Two", "text": "Random text two." }
+                                                        {
+                                                          "id": "wid-7",
+                                                          "name": "Cloud Risk Summary",
+                                                          "type": "pie",
+                                                          "text": "Pie chart showing scan results.",
+                                                          "data": [
+                                                            { "name": "Passed", "value": 7253, "color": "#52c41a" },
+                                                            { "name": "Failed", "value": 1689, "color": "#ff4d4f" },
+                                                            { "name": "Warning", "value": 681, "color": "#faad14" },
+                                                            { "name": "Not available", "value": 36, "color": "#d9d9d9" }
+                                                          ]
+                                                        }
                                                       ]
                                                     },
                                                     {
@@ -24,6 +34,9 @@
                                                         { "id": "wid-6", "name": "Permission Audit", "text": "Overview of high-privilege accounts." }
                                                       ]
                                                     }
+                                                    
+                                                    
+                                                    
                                                   ],
                                                   "searchQuery": ""
                                                 }

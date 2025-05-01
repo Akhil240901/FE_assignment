@@ -39,7 +39,7 @@ const Dashboard = () => {
           <div className="category-container" key={category.id}>
             <h2 className="category-title">{category.name}</h2>
             <div className="widget-list">
-              {category.widgets
+              {(category.widgets || [])
                 .filter((widget) =>
                   widget.name.toLowerCase().includes(searchQuery.toLowerCase())
                 )
