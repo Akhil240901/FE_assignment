@@ -60,7 +60,7 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { addWidget } from "../features/dashboardSlice";
-import "../style/widgetRightSide.css";
+import "../style/addWidget.css";
 const AddWidgetModal = ({ onClose }) => {
   const dispatch = useDispatch();
   const categories = useSelector((state) => state.dashboard.categories);

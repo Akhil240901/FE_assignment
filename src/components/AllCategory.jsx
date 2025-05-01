@@ -5,7 +5,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { removeWidget } from "../features/dashboardSlice";
 import "../style/manageWidget.css";
 
-const WidgetAssignmentModal = ({ onClose }) => {
+const AllCategory = ({ onClose }) => {
   const { categories } = useSelector((state) => state.dashboard);
   const [activeTab, setActiveTab] = useState(categories?.name || "");
   const dispatch = useDispatch();
@@ -76,4 +76,4 @@ const WidgetAssignmentModal = ({ onClose }) => {
   );
 };
 
-export default WidgetAssignmentModal;
+export default AllCategory;

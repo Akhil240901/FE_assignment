@@ -3,8 +3,9 @@ import { useSelector } from "react-redux";
 import Widget from "../components/Widgets";
 import AddWidgetModal from "../components/AddWidgetModal";
 import SearchWidget from "../components/SearchWidget";
-import WidgetAssignmentModal from "../components/WidgetAssignmentModal";
+import AllCategory from "../components/AllCategory";
 import "../style/dashboard.css";
+
 const Dashboard = () => {
   const categories = useSelector((state) => state.dashboard.categories);
   const searchQuery = useSelector((state) => state.dashboard.searchQuery);
@@ -62,9 +63,7 @@ const Dashboard = () => {
         )}
 
         {showAssignmentModal && (
-          <WidgetAssignmentModal
-            onClose={() => setShowAssignmentModal(false)}
-          />
+          <AllCategory onClose={() => setShowAssignmentModal(false)} />
         )}
       </div>
     </div>
